@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: A sample template
+Resources:
+  MysecurityGroup:
+   Type: AWS::EC2::Securitygroup
+   properties:
+      Groupdescription: ravioo7
+      GroupName: ravioo7
+      securitygroupingress:
+       - IpProtocol: tcp
+         Fromport: '22'
+         Toport: '22'
+         CidrIp: 0.0.0.0/0
+      SecurityGroupIngress: 
+       - IpProtocol: tcp
+         Fromport: '22'
+         CidrIp: 0.0.0.0/0
+         Toport: '22'
+      VpcId: vpc-09f41f99f36bf7e46
